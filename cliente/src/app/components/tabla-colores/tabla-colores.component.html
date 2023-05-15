@@ -36,18 +36,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr *ngFor="let color of listColores">
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                <p class="text-gray-900 whitespace-no-wrap">Verde Pastel</p>
+                                <p class="text-gray-900 whitespace-no-wrap">{{color.nombre}}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                <p class="text-gray-900 whitespace-no-wrap">#70f0ae</p>
+                                <p class="text-gray-900 whitespace-no-wrap">{{color.codigo}}</p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap"><i [style.color]="color.codigo" class="fa-solid fa-circle fa-xl"></i></p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                <p class="text-gray-900 whitespace-no-wrap"><i class="fa-solid fa-circle fa-xl" style="color:#70f0ae ;"></i></p>
-                            </td>
-                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                <p class="text-gray-900 whitespace-no-wrap">Activo</p>
+                                <p class="text-gray-900 whitespace-no-wrap">{{color.estado}}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <i class="fa-solid fa-eye fa-lg"></i>
